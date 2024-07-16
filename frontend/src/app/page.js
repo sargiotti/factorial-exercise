@@ -4,6 +4,7 @@ import { useState } from 'react';
 import MetricForm from '../components/MetricForm';
 import MetricTimeline from '../components/MetricTimeLine';
 import MetricChart from '../components/MetricChart';
+import MetricAverages from '@/components/MetricAverages';
 import './globals.css';
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
       <MetricForm onMetricAdded={handleMetricAdded} />
       <MetricTimeline newMetric={newMetric} />
       <MetricChart newMetric={newMetric} />
+      <MetricAverages />
     </div>
   );
 };
