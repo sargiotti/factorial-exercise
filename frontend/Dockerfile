@@ -1,7 +1,9 @@
-# Usar una imagen base de Node.js
+
 FROM node:18.19.0
 
-COPY . .
+WORKDIR /usr/src/app-front-end
+
+COPY package*.json ./
 
 RUN npm install
 

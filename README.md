@@ -3,8 +3,10 @@
 ### Pre-requisites
 
 1. NPM and Node.js 18.19.0 or above installed
+
 or
-2. Docker installed
+
+2. Docker installed if not, follow the instructions here: https://docs.docker.com/engine/install/
 
 You can run the application in two ways: directly with Node.js or using Docker.
 
@@ -12,9 +14,9 @@ You can run the application in two ways: directly with Node.js or using Docker.
 
 1. Install dependencies
 
-For the Back-end: "npm install"
+For the Back-end: move to the folder /server and run "npm install"
 
-For the Front-end: "npm install"
+For the Front-end: move to the folder /frontend and run "npm install"
 
 2. Run the Application
 For the Back-end: 
@@ -55,5 +57,5 @@ Backend: http://localhost:3001
 
 
 
-### Once the front-en is loaded, refresh the page to bring data from the database
+### Once the front-end is loaded, refresh the page to bring data from the database
 
