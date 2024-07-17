@@ -4,10 +4,10 @@ const Title = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 268 56"
-      className="fill-current my-8"
+      className="fill-current my-7"
       style={{
         color: 'rgb(229, 25, 67)',
-        width: '33%'
+        width: '35%'
       }}
     >
       <title>Factorial</title>
