@@ -10,7 +10,7 @@ const MetricForm = ({ onMetricAdded }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(''); // Clear previous errors
+    setError('');
 
     try {
       const response = await axios.post('http://localhost:3001/api/metrics', { name, value });
@@ -45,7 +45,7 @@ const MetricForm = ({ onMetricAdded }) => {
           className="border border-gray-300 p-2 rounded w-full text-gray-900"
         />
       </div>
-      <button type="submit" className="bg-blue-500 text-white p-2 rounded">
+      <button type="submit" className="bg-[#e51943] text-white p-2 rounded">
         Add Metric
       </button>
       {error && <p className="text-red-500 mt-4">{error}</p>}

@@ -12,7 +12,7 @@ const MetricChart = ({ newMetric }) => {
       {
         label: 'Metric Values',
         data: [],
-        borderColor: 'rgba(75, 192, 192, 1)',
+        borderColor: 'rgba(229, 25, 67, 1)',
         backgroundColor: 'rgba(75, 192, 192, 0.2)',
       },
     ],
@@ -36,7 +36,7 @@ const MetricChart = ({ newMetric }) => {
               {
                 label: 'Metric Values',
                 data: values,
-                borderColor: 'rgba(75, 192, 192, 1)',
+                borderColor: 'rgba(229, 25, 67, 1)',
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
                 pointHoverBorderWidth: 2,
               },
@@ -54,7 +54,7 @@ const MetricChart = ({ newMetric }) => {
   }, [newMetric]);
 
   return (
-    <div className="mb-8">
+    <div className="mb-8 text-black">
       <h2 className="text-2xl font-bold mb-4">Metric Chart</h2>
       {loading ? (
         <p className="text-gray-500">Loading...</p>

@@ -5,6 +5,7 @@ import MetricForm from '../components/MetricForm';
 import MetricTimeline from '../components/MetricTimeLine';
 import MetricChart from '../components/MetricChart';
 import MetricAverages from '@/components/MetricAverages';
+import Title from '@/components/Title';
 import './globals.css';
 
 const Home = () => {
@@ -15,12 +16,13 @@ const Home = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-4">Metrics App</h1>
+    <div className="container mx-auto px-4 py-8 bg-slate-50">
+      <Title/>
+      <h1 className="text-4xl font-bold mb-4 text-black">Metrics App</h1>
       <MetricForm onMetricAdded={handleMetricAdded} />
       <MetricTimeline newMetric={newMetric} />
       <MetricChart newMetric={newMetric} />
-      <MetricAverages />
+      <MetricAverages newMetric={newMetric} />
     </div>
   );
 };

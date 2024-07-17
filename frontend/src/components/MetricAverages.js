@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const MetricAverages = () => {
+const MetricAverages = (newMetric) => {
   const [averages, setAverages] = useState({
     day: null,
     hour: null,
@@ -31,7 +31,7 @@ const MetricAverages = () => {
     };
 
     fetchMetrics();
-  }, []);
+  }, [newMetric]);
 
   const calculateAverage = (data, unit) => {
     const values = data.map(metric => {
@@ -48,14 +48,14 @@ const MetricAverages = () => {
 
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-bold mb-4">Metric Load Averages</h2>
+      <h2 className="text-2xl font-bold mb-4 text-black">Metric Load Averages</h2>
       {error ? (
         <p className="text-red-500">{error}</p>
       ) : (
         <div>
-          <p>Average Day: {averages.day !== null ? averages.day.toFixed(0) : 'N/A'}</p>
-          <p>Average Hour: {averages.hour !== null ? averages.hour.toFixed(2) : 'N/A'}</p>
-          <p>Average Minute: {averages.minute !== null ? averages.minute.toFixed(2) : 'N/A'}</p>
+          <p className='text-black'>Average Day: {averages.day !== null ? averages.day.toFixed(0) : 'N/A'}</p>
+          <p className='text-black'>Average Hour: {averages.hour !== null ? averages.hour.toFixed(0) : 'N/A'}</p>
+          <p className='text-black'>Average Minute: {averages.minute !== null ? averages.minute.toFixed(0) : 'N/A'}</p>
         </div>
       )}
     </div>
